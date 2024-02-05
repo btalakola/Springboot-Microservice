@@ -1,6 +1,7 @@
+name: bumpup version
 on:
   push:
-    # Sequence of patterns matched against refs/tags
+    branches: main
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
@@ -12,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@main
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
