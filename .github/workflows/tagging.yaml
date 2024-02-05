@@ -20,8 +20,8 @@ jobs:
           WITH_V: false
         
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: 1.0.0
+          release_name: Release
           body: |
             Changes in this Release
             - First Change
